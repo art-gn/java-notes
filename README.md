@@ -11,7 +11,7 @@ class Main{
 ```
 
 Description de la fonction main
-La fonction "main" est la fonction principale d'un programme en java. C'est ici que on crée les objets et que l'on compose l'interface utilisateur en ligne de commande. Elle s'écrit de la manière suivante :
+La fonction "main" est la fonction principale d'un programme en java. C'est ici l'on appelle les autres classes et que l'on compose l'interface utilisateur en ligne de commande. Elle s'écrit de la manière suivante :
 ```java
 public static void main(String[] args)  {        
         garage g = new garage();
@@ -20,59 +20,6 @@ public static void main(String[] args)  {
         int panne;
         String NomDeVoiture;
         String NomDeMoto;
-        do {            
-            
-            System.out.println("_____MENU_____");
-            System.out.println("0.Quitter");
-            System.out.println("1.Montrer Garage");
-            System.out.println("2.Ajouter");
-            Scanner reader = new Scanner(System.in);
-            choix = reader.nextInt();
-            switch(choix){
-                case 1:
-                    System.out.println(g);
-                    break;
-                case 2:
-                    System.out.println("---CHOIX DU VEHICULE---");
-                    System.out.println("1.Voiture");
-                    System.out.println("2.Moto");
-                    Scanner reader2 = new Scanner(System.in);
-                    choix2 = reader2.nextInt();
-                    switch(choix2){
-                        case 1:
-                            System.out.println("Taper le nom:");
-                            Scanner reader3 = new Scanner(System.in);
-                            NomDeVoiture = reader3.nextLine();
-                            System.out.println("En Panne?");
-                            System.out.println("1.Oui");
-                            System.out.println("2.Non");
-                            Scanner reader5 = new Scanner(System.in);
-                            panne = reader5.nextInt();
-                            if (panne==1) {
-                                g.add(new voiture(NomDeVoiture));
-                                
-                            }
-                            break;
-                        case 2:
-                            System.out.println("Taper le nom");
-                            Scanner reader4 = new Scanner(System.in);
-                            NomDeMoto = reader4.nextLine();
-                            System.out.println("En Panne?");
-                            System.out.println("1.Oui");
-                            System.out.println("2.Non");
-                            Scanner reader6 = new Scanner(System.in);
-                            panne = reader6.nextInt();
-                            if (panne==1) {
-                                g.add(new moto(NomDeMoto));
-                                
-                            }
-                    }
-                   
-                 
-            }
-        }while (choix != 0);
-    }
-    
 }
 ```
 Voici un exemple ci-dessus pour une classe main.
